@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html >
+  <head>
+    <meta charset="UTF-8">
+    <title>Angular Search Application</title>
+    
+    
+    
+    <link rel='stylesheet prefetch' href='https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css'>
+
+        <link rel="stylesheet" href="css/style.css">
+
+    
+    
+    
+  </head>
+
+  <body>
+
+    <div class="container " ng-app="myapp" ng-controller="SearchController">
+  <h1 class="text-center" >{{search.title}}</h1>
+  <div class="custom-form custom-search-box">
+    <input type="search" class="form-control" ng-model="searchText">
+    <i class="icon icon-search"></i>
+
+  </div>
+  <!-- <div class="row"> 
+    <div class="col-md-3 text-center" ng-repeat = "book in search.books | filter:searchText">
+      <figure>
+        <img ng-src="{{book.img}}"></figure>
+      <h3>{{book.name}}</h3>
+      <p>{{book.dis}}</p>
+      
+    </div>
+    
+<!--   {{mydata}} 
+
+  </div>-->
+  
+  <div class="row well" ng-repeat = "Book in mydata.Books | filter:searchText">
+  <div class="col-md-3">
+  
+  
+  <figure><img ng-src="{{Book.Image}}"></img></figure>
+  
+  
+  </div>
+  <div class="col-md-9">
+   <h2>{{Book.ID}}</h2>
+    <h3>{{Book.Title}}</h3>
+	 <h4>{{Book.SubTitle}}</h4>
+	  <p>{{Book.Description}}</p>
+  <h5>{{Book.isbn}}</h5>
+  </div>
+  </div>
+
+</div>
+    <script src='https://code.jquery.com/jquery-2.2.4.min.js'></script>
+<script src='https://cdnjs.cloudflare.com/ajax/libs/angular.js/1.5.5/angular.min.js'></script>
+<script src='https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/js/bootstrap.min.js'></script>
+
+        <script src="js/index.js"></script>
+
+    
+    
+    
+  </body>
+</html>
